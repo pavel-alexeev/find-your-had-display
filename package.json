@@ -1,0 +1,25 @@
+{
+  "name": "find-your-hat",
+  "version": "1.0.0",
+  "description": "A terminal maze-solving game.",
+  "main": "main.js",
+  "author": "Codecademy",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavel-alexeev/fnd-your-hat-starting.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pavel-alexeev/fnd-your-hat-starting/issues"
+  },
+  "homepage": "https://github.com/pavel-alexeev/fnd-your-hat-starting#readme"
+}
