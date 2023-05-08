@@ -27,10 +27,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* p:last-of-type {
-  padding-bottom: 1.5rem;
-} */
-
 .mainH1,
 .mainP,
 .droppedElementLose,
@@ -69,11 +65,8 @@ input[value="EASY"]:hover,
 input[value="MEDIUM"]:hover,
 input[value="HARD"]:hover {
   cursor: pointer;
-  /* animation: borders 1s linear; */
   transform: translateY(-1px);
   transition: linear 0.2s;
-  /* background-color: rgb(123, 165, 202); */
-  /* color: #fff; */
   border-radius: 6px;
   box-shadow: 1px 1px 1px grey;
 }
@@ -91,26 +84,6 @@ input[value="NO"]:hover,
 input[value="NO"]:hover {
   background-color: #fdb7b9;
 }
-
-/* @keyframes borders {
-  0% {
-    transform: translateY(-50px);
-    border-top-left-radius: 8px;
-  }
-  25% {
-    transform: translateY(0px);
-    border-top-right-radius: 8px;
-  }
-  50% {
-    border-bottom-right-radius: 8px;
-  }
-  75% {
-    border-bottom-left-radius: 8px;
-  }
-  100% {
-    border-radius: 8px;
-  }
-} */
 
 #levelsContainer {
   display: flex;
@@ -193,10 +166,7 @@ input[value="NO"]:hover {
   font-size: 2rem;
   font-weight: 500;
   padding: 1rem;
-  /* border-radius: 5px; */
   display: inline-block;
-  /* background-color: rgba(0, 255, 247, 0.473); */
-  /* animation: fall 1.5s ease-in; */
   transition: linear all;
   color: #554b4b;
 }
@@ -242,22 +212,6 @@ input[value="NO"]:hover {
     transform: translateY(-300px) rotateZ(45deg);
     transform-origin: right bottom;
   }
-  /* 15% {
-    transform: translateZ(-50px) rotateZ(-15deg);
-  }
-  20% {
-    transform: rotateZ(10deg);
-  }
-  25% {
-    transform: rotateZ(-10deg);
-  }
-  30% {
-    transform: rotateZ(6deg);
-    opacity: 1;
-  }
-  35% {
-    transform: rotateZ(-4deg);
-  } */
   40% {
     transform: translateY(0) rotateZ(45deg);
     transform-origin: right bottom;
