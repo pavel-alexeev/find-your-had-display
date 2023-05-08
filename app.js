@@ -150,11 +150,6 @@ function startNewGame() {
   }
 }
 
-// const appendMinutes = document.querySelector(".minutes");
-// const appendSeconds = document.querySelector(".seconds");
-// const appendTens = document.querySelector(".tens");
-// const startTime = document.querySelector(".start");
-// const stopTime = document.querySelector(".stop");
 let minutes = 0;
 let seconds = 0;
 let tens = 0;
@@ -166,6 +161,7 @@ const clearTimer = () => {
   minutes = 0;
 };
 
+// Timer function
 function startTimer() {
   tens++;
   if (tens < 10) {
@@ -400,6 +396,7 @@ class Field {
     });
   }
 
+  // Course completion time
   finishTime() {
     if (minutes === 0) {
       minutes = "";
@@ -419,6 +416,7 @@ class Field {
     return `${minutes}${minutes > 0 ? ":" : ""}${seconds}.${tens}`;
   }
 
+  // Seconds per step average
   stepTime() {
     let time = (
       (Number(minutes * 6000) + seconds * 100 + tens) /
@@ -460,7 +458,6 @@ class Field {
         elementP2.setAttribute("class", "leftToRightSlide");
         clearInterval(interval);
         clearTimer();
-        // clearInterval(interval);
         this.askForNewGame();
         break;
       case fieldCharacter:
@@ -481,6 +478,7 @@ class Field {
 }
 let myField = new Field(Field.generateField(4, 4, 20));
 
+// Keyboard arrow buttons controls
 window.addEventListener("keydown", (e) => {
   if (gameStatus) {
     switch (e.key) {
