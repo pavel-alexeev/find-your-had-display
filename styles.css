@@ -26,6 +26,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+p:last-of-type {
+  padding-bottom: 1.5rem;
+}
+
 .mainH1,
 .mainP,
 .droppedElementLose,
@@ -319,9 +323,9 @@ input {
     flex-direction: column-reverse;
   }
 
-  #starting p {
+  #starting {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   .droppedElementWin {
@@ -362,20 +366,18 @@ input {
   }
 
   td img {
-    width: 0.77rem;
-    height: 0.77rem;
+    width: 0.78rem;
+    height: 0.78rem;
   }
 
-  #table {
-    /* position: absolute; */
-    /* left: 100px; */
-    /* width: 95%; */
-    table-layout: fixed;
-    border-collapse: collapse;
-    display: block;
-    /* max-width: 90vw; */
-    border: 3px rgb(108, 189, 157) solid;
-    border-radius: 0.5rem;
+  .easyLevelTable td img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .mediumLevelTable td img {
+    width: 1.05rem;
+    height: 1.05rem;
   }
 }
 
