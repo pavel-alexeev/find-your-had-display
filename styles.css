@@ -26,9 +26,9 @@ body {
   margin-bottom: 0.5rem;
 }
 
-p:last-of-type {
+/* p:last-of-type {
   padding-bottom: 1.5rem;
-}
+} */
 
 .mainH1,
 .mainP,
@@ -400,4 +400,8 @@ input {
 
 .leftDirection {
   transform: rotate(-90deg);
+}
+
+#askForNewGame {
+  margin-bottom: 2rem;
 }

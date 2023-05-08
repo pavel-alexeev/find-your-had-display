@@ -360,6 +360,7 @@ class Field {
     const newGameBtn = document.createElement("input");
     const exitBtn = document.createElement("input");
     const newGameDiv = gameStart.appendChild(document.createElement("div"));
+    newGameDiv.id = "askForNewGame";
     newGameDiv
       .appendChild(document.createElement("p"))
       .appendChild(document.createTextNode(`Would you like to play again?`));
