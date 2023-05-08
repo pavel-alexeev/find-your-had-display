@@ -370,14 +370,23 @@ input {
     height: 0.78rem;
   }
 
+  #table {
+    border-collapse: collapse;
+  }
+
   .easyLevelTable td img {
     width: 2rem;
     height: 2rem;
   }
 
   .mediumLevelTable td img {
-    width: 1.05rem;
-    height: 1.05rem;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .hardLevelTable td img {
+    width: 0.82rem;
+    height: 0.82rem;
   }
 }
 
