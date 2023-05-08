@@ -21,6 +21,7 @@ let ground = [];
 let move;
 let difficultyLevel;
 let steps = 0;
+let gameStatus = true;
 
 let indexH = 0;
 let indexW = 0;
@@ -114,6 +115,7 @@ function difficultyLevels() {
 
 // Games page function
 function startNewGame() {
+  gameStatus = true;
   const chronometer = document.createElement("p");
   while (gameStart.firstChild) {
     gameStart.removeChild(gameStart.lastChild);
@@ -428,6 +430,7 @@ class Field {
         while (gameStart.firstChild) {
           gameStart.removeChild(gameStart.lastChild);
         }
+        gameStatus = false;
         gameStart.appendChild(div);
         div.setAttribute("class", "droppedElementLose");
         div.innerHTML = `You lose! Fell into a hole.`;
@@ -439,6 +442,7 @@ class Field {
         while (gameStart.firstChild) {
           gameStart.removeChild(gameStart.lastChild);
         }
+        gameStatus = false;
         gameStart.appendChild(div);
         div.setAttribute("class", "droppedElementWin");
         div.innerHTML = `Congratulations!`;
@@ -474,20 +478,22 @@ class Field {
 let myField = new Field(Field.generateField(4, 4, 20));
 
 window.addEventListener("keydown", (e) => {
-  switch (e.key) {
-    case "ArrowUp":
-      moveUp();
-      break;
-    case "ArrowRight":
-      moveRight();
-      break;
-    case "ArrowDown":
-      moveDown();
-      break;
-    case "ArrowLeft":
-      moveLeft();
-      break;
-    default:
-      break;
+  if (gameStatus) {
+    switch (e.key) {
+      case "ArrowUp":
+        moveUp();
+        break;
+      case "ArrowRight":
+        moveRight();
+        break;
+      case "ArrowDown":
+        moveDown();
+        break;
+      case "ArrowLeft":
+        moveLeft();
+        break;
+      default:
+        break;
+    }
   }
 });
