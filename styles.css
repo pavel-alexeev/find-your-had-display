@@ -6,7 +6,7 @@ body {
   background-attachment: fixed;
   position: relative;
   width: 95%;
-  height: 100%;
+  max-height: 95vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +193,7 @@ input[value="NO"]:hover {
   font-size: 2rem;
   font-weight: 500;
   padding: 1rem;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   display: inline-block;
   /* background-color: rgba(0, 255, 247, 0.473); */
   /* animation: fall 1.5s ease-in; */
@@ -279,8 +279,8 @@ input[value="NO"]:hover {
 
 @keyframes rightToLeft {
   0% {
-    transform: translateX(600px);
-    opacity: 0.2;
+    transform: translateX(500px);
+    opacity: 0;
   }
   100% {
     transform: translateX(0px);
@@ -312,6 +312,7 @@ input {
   margin: 0.375rem;
   padding: 0.5rem 0.75rem;
 }
+
 #table {
   max-width: 95vw;
   border: 3px rgb(108, 189, 157) solid;
@@ -388,6 +389,15 @@ input {
   .hardLevelTable td img {
     width: 0.82rem;
     height: 0.82rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .droppedElementWin {
+    padding-bottom: 0;
+  }
+  .rightToLeftSlide {
+    padding-bottom: 1.5rem;
   }
 }
 
