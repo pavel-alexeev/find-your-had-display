@@ -19,6 +19,7 @@ const fieldCharacter = "./images/field.svg";
 let pathCharacter = "./images/downDir.svg";
 let ground = [];
 let move;
+let difficultyLevel;
 let steps = 0;
 
 let indexH = 0;
@@ -50,6 +51,7 @@ function difficultyLevels() {
   easyLevel.addEventListener(
     "click",
     () => {
+      difficultyLevel = "easy";
       areaWidth = 8;
       areaHeight = 6;
       holesPercentage = 23;
@@ -71,6 +73,7 @@ function difficultyLevels() {
   mediumLevel.addEventListener(
     "click",
     () => {
+      difficultyLevel = "medium";
       areaWidth = 18;
       areaHeight = 15;
       holesPercentage = 26;
@@ -92,6 +95,7 @@ function difficultyLevels() {
   hardLevel.addEventListener(
     "click",
     () => {
+      difficultyLevel = "hard";
       areaWidth = 25;
       areaHeight = 20;
       holesPercentage = 30;
@@ -119,7 +123,7 @@ function startNewGame() {
   ).innerHTML = `<span class="minutes">00</span>:<span class="seconds">00</span>:<span class="tens">00</span>`;
   chronometer.id = "chronometer";
   gameStart.appendChild(elementP);
-  elementP.innerHTML = `Use arrows to navigate your character or keyboard arrow buttons`;
+  elementP.innerHTML = `Use arrows buttons below or keyboard arrow buttons to navigate your character`;
   myField.createTable(myField._field);
   const arrowBtn = ["up", "left", "down", "right"];
   const arrowFunctions = [
@@ -313,6 +317,15 @@ class Field {
   createTable(tableData) {
     let table = document.createElement("table");
     table.id = "table";
+    if (difficultyLevel == "easy") {
+      table.className = "easyLevelTable";
+    }
+    if (difficultyLevel == "medium") {
+      table.className = "mediumLevelTable";
+    }
+    if (difficultyLevel == "hard") {
+      table.className = "hardLevelTable";
+    }
     let tableBody = document.createElement("tbody");
 
     tableData.forEach(function (rowData) {
