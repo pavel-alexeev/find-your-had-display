@@ -13,7 +13,7 @@ let areaWidth = 0;
 let areaHeight = 0;
 let holesPercentage = 0;
 
-const hat = "./images/hat.svg";
+let hat = "./images/hat.svg";
 const hole = "./images/hole-svgrepo-com.png";
 const fieldCharacter = "./images/field.svg";
 let pathCharacter = "./images/downDir.svg";
@@ -261,15 +261,19 @@ class Field {
             }
           }
         };
+
         // pathCharacter starting position
         ground[0][0] = pathCharacter;
         ground[i][j] = holeOrField(percentage);
       }
     }
+    ground[0][1] = fieldCharacter;
+    ground[1][0] = fieldCharacter;
     do {
-      ground[Math.floor(Math.random() * (width - 1))][
-        Math.floor(Math.random() * (height - 1))
-      ] = hat;
+      let randomHeight = Math.floor(Math.random() * width);
+      let randomWidth = Math.floor(Math.random() * height);
+      console.log(randomHeight, randomWidth);
+      ground[randomWidth][randomHeight] = hat;
     } while (ground[0][0] == hat);
     return ground;
   }
