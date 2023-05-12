@@ -17,6 +17,7 @@ body {
 }
 
 #starting {
+  padding-top: 2.5rem;
   height: 25%;
   text-align: center;
   display: inline-block;
@@ -268,6 +269,8 @@ input {
 }
 
 #table {
+  max-height: auto;
+  margin-top: 3.5rem;
   max-width: 95vw;
   border: 3px rgb(108, 189, 157) solid;
   border-radius: 0.5rem;
@@ -281,6 +284,7 @@ input {
 
   #starting {
     margin-top: 2rem;
+    padding-top: 3rem;
     margin-bottom: 2rem;
   }
 
@@ -369,4 +373,5 @@ input {
 
 #askForNewGame {
   padding-bottom: 2rem;
+  z-index: 2;
 }
