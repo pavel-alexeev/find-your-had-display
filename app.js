@@ -437,7 +437,7 @@ class Field {
         div.setAttribute("class", "droppedElementLose");
         div.innerHTML = `You lose! Fell into a hole.`;
         clearInterval(interval);
-        clearTimer;
+        clearTimer();
         this.askForNewGame();
         break;
       case hat:
